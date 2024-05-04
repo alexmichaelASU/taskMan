@@ -1,0 +1,45 @@
+<main class="container">
+    <div class="mainContent">
+      <div class="header">
+        {{ userName }}'s TaskMan
+      </div>
+  
+      <div class="taskWork">
+          <div class="listNames">
+              <p class="listDefault">Lists
+                  
+                  <img src="assets/settings.png" alt="Settings Icon" class="settings-icon" 
+                       (click)="onSettingsClick(listId)" 
+                       *ngIf="listId">
+              </p>
+              
+              <div *ngFor="let list of lists" class="lists" 
+                   (click)="onListSelect(list._id)">
+                  
+                  {{ list.title }}
+                  <span *ngIf="list._id === listId"></span>
+              </div>
+              
+              <img src="assets/addItem.png" alt="Add Image Not Loaded" class="add-item-icon" (click)="onCreateClick()">
+          </div>
+          
+          <div class="taskNames">
+            <p class="taskDefault">Tasks</p>
+            
+            <div *ngFor="let task of tasks" class="tasks" 
+                 [class.completed]="task.completed"
+                 (click)="onToggleTaskCompletion(task)">
+                <img src="assets/edit1.png" alt="Edit Icon" class="taskEdit-icon"
+                (click)="onTaskEditClick(task._id)">
+                {{ task.title }}
+                <img src="assets/remove.png" alt="Delete Icon" class="delete-icon"
+                (click)="onDeleteTask(task._id)">
+            </div>
+        
+            <img src="assets/addItem.png" alt="Add Image Not Loaded" class="add-item-icon2"
+            (click)="onTaskCreateClick(listId)" *ngIf="listId">
+        </div>
+      </div>
+    </div>
+  </main>
+  

@@ -1,0 +1,26 @@
+<main>
+   <div class="wrapper">
+     <div class="title">
+        Login
+     </div>
+     <form (ngSubmit)="login(form)" #form="ngForm">
+        <div class="field">
+           <input type="text" name="email" ngModel required>
+           <label>Email Address</label>
+        </div>
+        <div class="field">
+           <input type="password" name="password" ngModel required>
+           <label>Password</label>
+        </div>
+        <div class="spacing">
+        </div>
+        <div class="field">
+           <input type="submit" value="Login">
+        </div>
+        <div class="signup-link">
+           Not a member? <a routerLink="/signup" routerLinkActive="active">Signup now</a>
+        </div>
+     </form>
+   </div>
+ </main>
+ 

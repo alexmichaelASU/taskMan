@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+html {
+    
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    background: linear-gradient(to left, #8eb1c7, #2a5d44);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}

@@ -1,0 +1,226 @@
+/* Container styling */
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+/* Main content box */
+.mainContent {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    background-color: #f0e8d0; 
+    height: 75%;
+    width: 75%;
+    border-radius: 8px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Header styling */
+.header {
+    color: black;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #f0e8d0; 
+    height: 7%;
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 2px dotted black;
+}
+
+
+
+
+/* Settings icon styling */
+.settings-icon {
+    width: 25px; 
+    height: 25px;
+    margin: 0px;
+    margin-left: 120px;
+}
+
+
+
+/* Task Edit icon styling */
+.taskEdit-icon {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px; 
+    margin-left: 5px;
+}
+
+/* Delete icon styling */
+.delete-icon {
+    width: 20px; 
+    height: 20px; 
+    margin-left: 10px; 
+    margin-right: 5px;
+}
+
+/* Task work styling */
+.taskWork {
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: center; 
+    flex-grow: 1; 
+    text-align: center; 
+}
+
+/* List names styling */
+.listNames {
+    position: relative;
+    color: black;
+    background-color: #4a886b;
+    height: 93%;
+    width: 20%; 
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-left: 20px;
+    border: 2px dotted black;
+}
+
+.add-item-icon {
+    position: absolute;
+    bottom: 0; 
+    right: 0;  
+    margin: 10px;
+}
+
+/* Task names styling */
+.taskNames {
+    position: relative;
+    color: black;
+    background-color: #b0d7e4;
+    height: 93%;
+    flex-grow: 1; 
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-right: 20px;
+    border: 2px dotted black;
+    border-left: 0px;
+}
+
+.add-item-icon2 {
+    position: absolute;
+    bottom: 0; 
+    right: 0;  
+    margin: 10px; 
+}
+/* Default list title */
+.listDefault {
+    margin: 0px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+/* List items styling */
+.lists {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    letter-spacing: normal;
+    font-size: 17px;
+    background-color: #f0e8d0;
+    border-radius: 6px;
+    margin: 0px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 80%;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Default task title */
+.taskDefault {
+    margin: 0px;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+/* Tasks styling */
+.tasks {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    letter-spacing: normal;
+    font-size: 20px;
+    background-color: #f0e8d0;
+    border-radius: 6px;
+    width: 80%;
+    margin: 0px;
+    height: 40px;
+    margin-bottom: 15px;
+    margin-left: 100px;
+    transition: transform 0.3s ease-in-out; 
+    cursor: pointer;
+}
+
+
+
+/* Hover effects for icons */
+.taskEdit-icon:hover,
+.delete-icon:hover,
+.settings-icon:hover,
+.add-item-icon2,
+.add-item-icon {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.tasks:hover,
+.lists:hover,
+.add-item-icon2,
+.add-item-icon {
+    transform: scale(1.05); 
+    
+}
+
+.dropbtn {
+	background-color: #b0d7e4;
+	color: black;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+  }
+  
+  .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  .dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  
+  .completed {
+    text-decoration: line-through;
+    color: gray;
+}
