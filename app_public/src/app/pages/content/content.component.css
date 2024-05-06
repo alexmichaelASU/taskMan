@@ -37,9 +37,12 @@
 
 /* Settings icon styling */
 .settings-icon {
+	  position: absolute;
+	  top: 0; 
+    right: 0;
     width: 25px; 
     height: 25px;
-    margin: 0px;
+    margin: 15px;
     margin-left: 120px;
 }
 
