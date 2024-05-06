@@ -70,6 +70,28 @@ exports.deleteList = async (req, res, next) => {
     }
 };
 
+exports.deleteListsByEmail = async (req, res, next) => {
+    try {
+        const email = req.params.email;
+        
+        const lists = await List.find({ email });
+        
+        if (lists.length === 0) {
+            return res.status(404).json({ message: 'No lists found for this email' });
+        }
+
+        const listIds = lists.map(list => list._id);
+
+        await Task.deleteMany({ _listId: { $in: listIds } });
+
+        await List.deleteMany({ email });
+
+        res.status(204).end();
+    } catch (error) {
+        next(error);
+    }
+};
+
 // Task Endpoints
 
 // Get all tasks for a list

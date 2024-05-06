@@ -1,4 +1,3 @@
-
 <header>
 	<img src="../../../assets/taskManLogo.png" alt="logo not loaded">
 	
@@ -6,12 +5,11 @@
 	<button class="dropbtn">User</button>
 	<div class="dropdown-content">
 		<!-- delete all lists and task -->
-	  <a>Delete Everything</a>
+		<a (click)="reDirect()">Delete Everything</a>
 	  <a routerLink="/login" routerLinkActive="active">Login</a>
 	  <a (click)="logout()">Logout</a>
 	</div>
   </div>
 
 </header>
-
 

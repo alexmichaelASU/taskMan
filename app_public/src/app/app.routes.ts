@@ -7,6 +7,7 @@ import { ListcreateComponent } from './pages/listcreate/listcreate.component';
 import { TaskCreateComponent } from './pages/task-create/task-create.component';
 import { EditTaskComponent } from './pages/edit-task/edit-task.component';
 import { authGuard } from './auth.guard';
+import { DeleteComponent } from './pages/delete/delete.component';
 export const routes: Routes = [
     { path: '', redirectTo: '/main', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
@@ -15,5 +16,6 @@ export const routes: Routes = [
     { path: 'listedit/:listid', component: EditListComponent, canActivate: [authGuard] },
     { path: 'listcreate', component: ListcreateComponent, canActivate: [authGuard] },
     { path: 'taskcreate/:listid', component: TaskCreateComponent, canActivate: [authGuard] },
-    { path: 'taskedit/:taskid', component: EditTaskComponent, canActivate: [authGuard] }
+    { path: 'taskedit/:taskid', component: EditTaskComponent, canActivate: [authGuard] },
+    { path: 'delete', component: DeleteComponent, canActivate: [authGuard] }
 ];

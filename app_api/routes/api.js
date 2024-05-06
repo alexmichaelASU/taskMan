@@ -32,7 +32,7 @@ router.get('/lists/by-email/:email', apiController.getListsByEmail);
 router.post('/lists',  auth,  apiController.createList);
 router.put('/lists/:id',  auth, apiController.updateList);
 router.delete('/lists/:id',  auth, apiController.deleteList);
-
+router.delete('/lists/by-email/:email', auth, apiController.deleteListsByEmail);
 // Task routes
 router.get('/lists/:listId/tasks',  auth,  apiController.getTasksForList);
 router.post('/lists/:listId/tasks',  auth,  apiController.createTask);

@@ -1,0 +1,51 @@
+.editContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.edit-title {
+
+    margin: 0; 
+    text-align: center; 
+    font-weight: bold; 
+}
+
+.editer {
+    color: black;
+    background-color: #f0e8d0;
+    height: 120px;
+    width: 500px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+
+.edit-input {
+    border: 0px;
+    border-radius: 5px;
+    height: 30px;
+    width: 450px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+button {
+     background-color: white;
+    border: 0px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #8eb1c7;
+}

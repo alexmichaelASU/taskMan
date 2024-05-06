@@ -35,6 +35,10 @@ export class ListandTaskService {
     return this.apiReq.delete(`api/lists/${listId}`);
   }
 
+  deleteListsByEmail(email: string): Observable<any> {
+    return this.apiReq.delete(`api/lists/by-email/${email}`);
+  }
+  
   // Task Endpoints
 
   createTask(listId: string, title: string): Observable<any> {
